@@ -9,10 +9,16 @@
 
     <!-- CONFIG: DEFAULT THEME -->
 
-    <!-- Use dark theme as default theme -->
-    <bool name="use_dark_theme">true</bool>
+    <!-- Set the default theme
+        Available choices:
+        - auto
+        - light
+        - dark
+    -->
+        <string name="default_theme">dark</string>
 
-    <string name="splash_screen_title">Delta</string>
+        <string name="splash_screen_title">Delta</string>
+
 
     <!-- CONFIG: MUZEI -->
 
@@ -24,6 +30,7 @@
 
     <!-- Muzei base color -->
     <color name="muzei_color">#4A4A4A</color>
+
 
     <!-- CONFIG: HOME -->
 
@@ -51,10 +58,12 @@
 
     <!-- Home description
     - If you don't want to show description, just leave this empty -->
-    <string name="home_description"><![CDATA[
+    <string name="home_description">
+        <![CDATA[
             Pastel coloured side-project.
             To aid with development please take a look at the repo which can be found at: https://github.com/Delta-Icons/android
-        ]]></string>
+        ]]>
+    </string>
 
     <!-- More apps at Google Play Store
     * Link to google play store developer
@@ -140,10 +149,19 @@
     <!-- If you set it to true, your user can even choose non-mailing app for requesting Icons -->
     <bool name="enable_non_mail_app_request">true</bool>
 
-    <!-- Email that will be used to send icon request and report bugs -->
-    <string name="dev_email">iballleif@live.de</string>
+    <bool name="hide_missing_app_count">false</bool>
+    <string name="regular_request_method">email</string>
+    <!-- <string name="premium_request_method"></string> -->
 
-    <!-- CONFIG: CLOUD WALLPAPERS -->
+    <!-- Email that will be used to send icon request and report bugs -->
+    <!-- <string name="dev_email">iballleif@live.de</string> -->
+    <string name="regular_request_email">delta.iconpack@gmail.com</string>
+
+    <!-- <string name="premium_request_email"></string> -->
+    <!-- <string name="regular_request_email_subject"></string>
+         <string name="premium_request_email_subject"></string> -->
+
+     <!-- CONFIG: CLOUD WALLPAPERS -->
 
     <!-- Wallpaper json link
     * If your icon pack doesn't contains any wallpaper, just leave this empty
@@ -214,14 +232,13 @@
     * ex:
     * <string-array name="about_social_links"></string-array>-->
     <string-array name="about_social_links">
-        <item>https://www.instagram.com/_u/leifpixel</item>
-        <item>http://github.com/leifniem</item>
-        <item>http://www.leifs.website</item>
-        <item>iballleif@live.de</item>
+        <item>https://github.com/Delta-Icons/android</item>
+        <item>https://delta-icons.github.io/</item>
+        <item>delta.iconpack@gmail.com</item>
     </string-array>
 
     <!-- Contributors dialog
-    * Take a look inside res/xml/dashboard_contributorsntributors.xml to add dashboard_contributors -->
+    * Take a look inside res/xml/contributors.xml to add contributors -->
     <bool name="show_contributors_dialog">true</bool>
 
     <!-- CONFIG: DONATE -->
@@ -239,10 +256,14 @@
     <bool name="playstore_check_enabled">false</bool>
 
     <!-- Link CandyBar Config JSON -->
-    <string name="config_json"></string>
+<!--    <string name="config_json"></string>-->
 
     <!-- CONFIG: INTRO -->
     <!-- Show Intro Guides on First Run -->
     <bool name="show_intro">true</bool>
+
+    <!-- Enable if your icon pack includes adaptive icons.
+        When enabled, the dashboard shows an Icon Shape changer button -->
+    <bool name="includes_adaptive_icons">false</bool>
 
 </resources>
